@@ -1,0 +1,14 @@
+{
+  "column_names": {
+    "txn_id": "transaction_id",
+    "cust_id": "customer_id",
+    "City_name": "city",
+    "Country_code": "country",
+    "Tx_time": "time_of_transaction"
+  },
+  "countries": {
+    "2": "FR",
+    "3": "DE",
+    "4": "UK"
+  }
+}

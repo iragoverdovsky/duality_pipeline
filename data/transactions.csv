@@ -1,0 +1,4 @@
+txn_id,cust_id,City_name,Country_code,Tx_time
+1234,8899,Paris,2,2025-04-01 12:34:56
+2345,7788,Berlin,3,2025-05-01 14:22:10
+3456,6677,London,None,2025-06-15 10:00:00

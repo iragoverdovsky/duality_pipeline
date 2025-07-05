@@ -1,0 +1,24 @@
+{
+  "id": "retrieve_mapping_postgres",
+  "query_type": "RETRIEVE",
+  "retrieve_fields": [
+    "customer_id",
+    "city",
+    "time_of_transaction"
+  ],
+  "table": "transactions",
+  "predicates": [
+    {
+      "field_name": "time_of_transaction",
+      "operator": "last_time_period",
+      "time_period_type": "year",
+      "value": 1
+    }
+  ,
+    {
+      "field_name": "country",
+      "operator": "eq",
+      "value": null
+    }
+  ]
+}
