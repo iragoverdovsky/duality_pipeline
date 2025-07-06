@@ -27,7 +27,7 @@ class Transform:
 
         country_map = self.mapping_config["countries"]
         if "country" in df.columns:
-            df["country"] = df["country"].astype(str).map(country_map)
+            df["country"] = df["country"].astype(pd.Int64Dtype()).astype(str).map(country_map)
 
         for col, dtype in schema.items():
             if col not in df.columns:
