@@ -20,7 +20,10 @@ def run_pipeline(source_type = "csv"):
     query_engine = QueryEngine()
 
     df : pd.DataFrame = loader.load()
+    # store if need keep raw data
+    df.to_json("output/raw/duality_input.json", orient="records", lines=True)
 
+    # could be in different server -> start read from output/raw/ -> to_df
     df : pd.DataFrame= query_engine.apply_duality_query(df)
     logger.info(f"Filtered to {len(df)} rows after Duality query")
 
