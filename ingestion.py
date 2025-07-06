@@ -5,6 +5,15 @@ from loader.PostgresLoader import PostgresLoader
 from loader.ApiLoader import ApiLoader
 from loader.CsvLoader import CsvLoader
 
+
+# conf could have list of each type
+# in csv and parquet could be change for the folder only,
+# in loader add read the list of files and process each file separate
+
+# in api case -> use scraping technique to read page and find links and expand to read to the end of tree
+# kafka -> list of topics -> create consumer per topic
+# postgres -> predefine list of tables (per ech table create mapping)
+# or use predefine sql statement
 conf = {
         "csv" : {"csv_path":"data/transactions.csv",
                  "chunksize": 10000},
