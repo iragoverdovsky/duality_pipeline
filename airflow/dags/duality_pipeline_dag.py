@@ -11,6 +11,11 @@ from main import run_pipeline
 
 #could be run as dag , take source_type for loading from external place or per time delta vs type
 #or create tasks with different source types
+# possible options for extend solution for use airflow as orchestrator
+# Create operator that run deffer task, use Triggerer - add file to the observing folder for example
+# or use sql or stream for db case
+# polling with timedelta interval for the kafka
+# in the case of api use timedelta loop
 
 with DAG(
     dag_id='duality_pipeline_dag',
